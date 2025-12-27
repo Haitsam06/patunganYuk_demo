@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PatunganWeb3 - Platform Patungan Aman & Transparan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              base: "#0052FF", // Base Network Blue
+              idrx: "#12B76A", // Money Green
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    <nav class="bg-white/80 backdrop-blur-md fixed w-full z-50 border-b border-gray-100 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">P</div>
+            <span class="font-bold text-xl tracking-tight">
+              Patungan
+              <span class="text-blue-600">Web3</span>
+            </span>
+          </div>
+
+          <div class="hidden md:flex space-x-8 items-center">
+            <a href="#cara-kerja" class="text-gray-500 hover:text-blue-600 font-medium transition">Cara Kerja</a>
+            <a href="#fitur" class="text-gray-500 hover:text-blue-600 font-medium transition">Keunggulan</a>
+            <a href="#faq" class="text-gray-500 hover:text-blue-600 font-medium transition">FAQ</a>
+          </div>
+
+          <div class="flex gap-4">
+            <a href="login.html" class="hidden md:block px-5 py-2.5 text-sm font-semibold text-gray-600 hover:text-gray-900">Masuk</a>
+            <a href="dashboard.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full font-bold text-sm transition shadow-lg shadow-blue-200 flex items-center gap-2">
+              <i class="fa-solid fa-wallet"></i>
+              Connect Wallet
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto">
+          <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 rounded-full px-4 py-1.5 mb-8">
+            <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">BARU</span>
+            <span class="text-sm font-medium text-blue-800">Support Base Network & IDRX Stablecoin</span>
+          </div>
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-gray-900 mb-6 leading-tight">
+            Patungan Tanpa
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Was-Was</span>
+            , Dijamin
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Anti-Tilep</span>
+            .
+          </h1>
+          <p class="text-xl text-gray-500 mb-10 leading-relaxed">Platform penggalangan dana terdesentralisasi. Dana dikunci Smart Contract, transparan di Blockchain, dan bebas biaya gas untuk semua peserta.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="create.html" class="px-8 py-4 bg-blue-600 text-white rounded-full font-bold text-lg hover:bg-blue-700 transition shadow-xl shadow-blue-200/50">Buat Patungan Sekarang</a>
+            <a href="#explore" class="px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-full font-bold text-lg hover:bg-gray-50 transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              Cari Kegiatan
+            </a>
+          </div>
+
+          <div class="mt-12 pt-8 border-t border-gray-100">
+            <p class="text-sm text-gray-400 font-medium mb-4 uppercase tracking-wider">Didukung Teknologi Terbaik</p>
+            <div class="flex justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition duration-500">
+              <span class="font-bold text-xl flex items-center gap-2">
+                <div class="w-5 h-5 bg-blue-500 rounded-full"></div>
+                BASE
+              </span>
+              <span class="font-bold text-xl flex items-center gap-2">
+                <div class="w-5 h-5 bg-green-500 rounded-full"></div>
+                IDRX
+              </span>
+              <span class="font-bold text-xl flex items-center gap-2">
+                <div class="w-5 h-5 bg-indigo-500 rounded-full"></div>
+                Coinbase
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute top-20 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+              Uang patungan sering dibawa lari admin?
+              <span class="text-red-500">Stop sekarang.</span>
+            </h2>
+            <p class="text-lg text-gray-500 mb-6">Masalah utama patungan konvensional adalah kepercayaan. Uang masuk ke rekening pribadi admin, dan tidak ada yang menjamin uang itu aman.</p>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-xmark"></i></div>
+                <span class="text-gray-600">Admin bisa pakai uang sesuka hati.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-xmark"></i></div>
+                <span class="text-gray-600">Tidak ada bukti transaksi yang transparan.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center flex-shrink-0 mt-1"><i class="fa-solid fa-xmark"></i></div>
+                <span class="text-gray-600">Susah refund kalau acara batal.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <div class="absolute inset-0 bg-blue-600 rounded-2xl transform rotate-3 opacity-10"></div>
+            <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-xl relative z-10">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                  <h3 class="font-bold text-xl">Solusi Smart Contract</h3>
+                  <p class="text-sm text-gray-500">Teknologi Pengaman Dana Otomatis</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                  <i class="fa-solid fa-check text-green-600"></i>
+                  <span class="font-medium text-gray-700">Dana dikunci di Escrow (Brankas Digital)</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                  <i class="fa-solid fa-check text-green-600"></i>
+                  <span class="font-medium text-gray-700">Pencairan butuh persetujuan peserta</span>
+                </div>
+                <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                  <i class="fa-solid fa-check text-green-600"></i>
+                  <span class="font-medium text-gray-700">Transparansi 100% di Blockchain</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cara-kerja" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Cara Kerja Simple</h2>
+          <p class="text-gray-500 text-lg">Tidak perlu paham teknis crypto. Kami buat semuanya semudah transfer bank biasa.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center group hover:-translate-y-2 transition duration-300">
+            <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-blue-600 group-hover:text-white transition">1</div>
+            <h3 class="font-bold text-lg mb-2">Buat Patungan</h3>
+            <p class="text-sm text-gray-500">Isi target dana, deadline, dan rekening tujuan pencairan (Off-ramp).</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center group hover:-translate-y-2 transition duration-300">
+            <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-blue-600 group-hover:text-white transition">2</div>
+            <h3 class="font-bold text-lg mb-2">Deposit (Gasless)</h3>
+            <p class="text-sm text-gray-500">Peserta kirim IDRX. Tidak perlu punya ETH untuk gas fee.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center group hover:-translate-y-2 transition duration-300">
+            <div class="w-14 h-14 mx-auto bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-blue-600 group-hover:text-white transition">3</div>
+            <h3 class="font-bold text-lg mb-2">Validasi Acak</h3>
+            <p class="text-sm text-gray-500">Sistem memilih peserta acak (Validator) untuk menyetujui pencairan.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center group hover:-translate-y-2 transition duration-300">
+            <div class="w-14 h-14 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-green-600 group-hover:text-white transition">4</div>
+            <h3 class="font-bold text-lg mb-2">Cair ke Rupiah</h3>
+            <p class="text-sm text-gray-500">Setelah disetujui, dana IDRX otomatis ditukar ke Rupiah & masuk rekening tujuan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fitur" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold">Kenapa Pilih Kami?</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-gray-100">
+            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white text-xl mb-6">
+              <i class="fa-solid fa-gas-pump"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-3">100% Gasless</h3>
+            <p class="text-gray-500">Teknologi Paymaster kami menanggung biaya jaringan. Anda hanya perlu IDRX, tanpa pusing beli ETH.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-gray-100">
+            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center text-white text-xl mb-6">
+              <i class="fa-solid fa-money-bill-wave"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-3">Stablecoin IDRX</h3>
+            <p class="text-gray-500">Nilai dana Anda stabil 1:1 dengan Rupiah. Tidak perlu takut harga Bitcoin naik turun saat patungan.</p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition border border-gray-100">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-white text-xl mb-6">
+              <i class="fa-solid fa-users-viewfinder"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-3">Validator Tiering</h3>
+            <p class="text-gray-500">Keamanan berlapis. Semakin banyak peserta, semakin banyak validator yang dibutuhkan untuk pencairan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="explore" class="py-20 bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-end mb-10">
+          <div>
+            <h2 class="text-3xl font-bold mb-2">Patungan Trending 🔥</h2>
+            <p class="text-gray-400">Bergabung dengan inisiatif yang sedang berjalan.</p>
+          </div>
+          <a href="#" class="text-blue-400 font-semibold hover:text-blue-300">Lihat Semua -></a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-gray-500 transition cursor-pointer">
+            <div class="h-48 bg-gray-700 w-full relative">
+              <div class="absolute inset-0 flex items-center justify-center text-gray-500">Image Placeholder</div>
+              <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Bantuan Bencana Cianjur</h3>
+              <p class="text-sm text-gray-400 mb-4">Patungan logistik & obat-obatan.</p>
+              <div class="w-full bg-gray-700 rounded-full h-2 mb-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 60%"></div>
+              </div>
+              <div class="flex justify-between text-xs font-semibold">
+                <span>60 Juta IDRX</span>
+                <span class="text-gray-400">Target: 100 Juta</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-gray-500 transition cursor-pointer">
+            <div class="h-48 bg-gray-700 w-full relative">
+              <div class="absolute inset-0 flex items-center justify-center text-gray-500">Image Placeholder</div>
+              <span class="absolute top-4 left-4 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Gathering Komunitas Dev</h3>
+              <p class="text-sm text-gray-400 mb-4">Sewa venue & katering.</p>
+              <div class="w-full bg-gray-700 rounded-full h-2 mb-2">
+                <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+              </div>
+              <div class="flex justify-between text-xs font-semibold">
+                <span>8.5 Juta IDRX</span>
+                <span class="text-gray-400">Target: 10 Juta</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 rounded-2xl overflow-hidden border border-gray-700 hover:border-gray-500 transition cursor-pointer">
+            <div class="h-48 bg-gray-700 w-full relative">
+              <div class="absolute inset-0 flex items-center justify-center text-gray-500">Image Placeholder</div>
+              <span class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded">VALIDATING</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-bold text-lg mb-2">Kado Nikahan Admin</h3>
+              <p class="text-sm text-gray-400 mb-4">Beli Kulkas 2 Pintu.</p>
+              <div class="w-full bg-gray-700 rounded-full h-2 mb-2">
+                <div class="bg-green-500 h-2 rounded-full" style="width: 100%"></div>
+              </div>
+              <div class="flex justify-between text-xs font-semibold">
+                <span>5 Juta IDRX</span>
+                <span class="text-gray-400">Tercapai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-10">Pertanyaan Umum</h2>
+
+        <div class="space-y-4">
+          <details class="group bg-gray-50 p-6 rounded-xl border border-gray-100 cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg list-none">
+              Apakah saya harus punya ETH Base?
+              <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <p class="text-gray-600 mt-4 leading-relaxed">
+              Tidak! Platform kami menggunakan fitur
+              <strong>Paymaster</strong>
+              . Anda hanya perlu memiliki IDRX untuk berpartisipasi. Biaya gas ditanggung oleh sistem (dipotong kecil dari deposit).
+            </p>
+          </details>
+
+          <details class="group bg-gray-50 p-6 rounded-xl border border-gray-100 cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg list-none">
+              Bagaimana jika target patungan tidak tercapai?
+              <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <p class="text-gray-600 mt-4 leading-relaxed">
+              Jika sampai batas waktu (deadline) dana belum terkumpul, fitur
+              <strong>Batch Refund</strong>
+              akan aktif. Anda bisa menarik kembali dana IDRX Anda 100% (dikurangi biaya layanan awal).
+            </p>
+          </details>
+
+          <details class="group bg-gray-50 p-6 rounded-xl border border-gray-100 cursor-pointer">
+            <summary class="flex justify-between items-center font-bold text-lg list-none">
+              Siapa yang menjadi Validator?
+              <span class="transition group-open:rotate-180"><i class="fa-solid fa-chevron-down"></i></span>
+            </summary>
+            <p class="text-gray-600 mt-4 leading-relaxed">Validator dipilih secara acak oleh Smart Contract dari daftar peserta. Untuk grup kecil (< 10 orang), minimal 50% peserta harus setuju agar dana cair.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-blue-600 text-white text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-6">Mulai Patungan Tanpa Rasa Curiga</h2>
+        <p class="text-blue-100 text-lg mb-8">Bergabunglah dengan ribuan orang yang sudah beralih ke cara patungan modern, aman, dan transparan.</p>
+        <a href="create.html" class="inline-block bg-white text-blue-600 font-bold px-10 py-4 rounded-full text-lg hover:bg-gray-100 transition shadow-xl">Buat Akun & Mulai Sekarang</a>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-2 mb-4 text-white">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold">P</div>
+            <span class="font-bold text-xl">PatunganWeb3</span>
+          </div>
+          <p class="max-w-xs text-sm">Platform group funding terpercaya di Indonesia berbasis Base Blockchain.</p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4">Platform</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400">Jelajah</a></li>
+            <li><a href="#" class="hover:text-blue-400">Cara Kerja</a></li>
+            <li><a href="#" class="hover:text-blue-400">Smart Contract (Github)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-4">Legal</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-blue-400">Syarat & Ketentuan</a></li>
+            <li><a href="#" class="hover:text-blue-400">Kebijakan Privasi</a></li>
+            <li><a href="#" class="hover:text-blue-400">Hubungi Kami</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center">&copy; 2025 PatunganWeb3. Built for Base Hackathon.</div>
+    </footer>
+  </body>
+</html>
