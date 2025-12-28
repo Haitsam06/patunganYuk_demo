@@ -156,47 +156,6 @@
     </a>
 
     <div class="container bg-white rounded-[20px] shadow-2xl relative overflow-hidden w-full max-w-4xl min-h-[600px]" id="container">
-      <div class="form-container sign-up-container">
-        <form action="#" class="bg-white flex flex-col items-center justify-center h-full px-10 text-center">
-          <div class="mt-10">
-            <h1 class="font-bold text-3xl text-blue-600 mb-4">Buat Akun</h1>
-
-            <div class="flex gap-4 mb-4 justify-center">
-              <a href="#" class="border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-blue-50 hover:text-blue-600 transition">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-blue-50 hover:text-blue-600 transition">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="border border-gray-200 rounded-full w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-blue-50 hover:text-blue-600 transition">
-                <i class="fab fa-discord"></i>
-              </a>
-            </div>
-
-            <span class="text-xs text-gray-400 mb-4 block">atau daftar menggunakan dompet (Web3)</span>
-
-            <div class="w-full space-y-3 mb-6">
-              <button type="button" class="group w-full bg-blue-50 border border-blue-100 hover:bg-blue-100 text-gray-700 py-3 px-4 rounded-xl flex items-center gap-3 transition">
-                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-md">
-                  <i class="fas fa-bolt text-xs"></i>
-                </div>
-                <div class="text-left flex-1">
-                  <span class="block text-sm font-bold text-blue-900">Smart Wallet</span>
-                  <span class="block text-[10px] text-gray-500 uppercase font-medium">Gasless & Instan</span>
-                </div>
-                <i class="fas fa-arrow-right text-blue-300 group-hover:text-blue-600"></i>
-              </button>
-
-              <div class="bg-gray-50 flex items-center px-4 py-3 rounded-xl w-full border border-gray-100 focus-within:border-blue-300 transition">
-                <i class="far fa-user text-gray-400 mr-3"></i>
-                <input type="text" placeholder="Username / Basename" class="bg-transparent border-none outline-none w-full text-sm text-gray-700 placeholder-gray-400" />
-              </div>
-            </div>
-
-            <button class="bg-blue-600 text-white font-bold py-3 px-12 rounded-full uppercase text-xs tracking-wider transform transition hover:bg-blue-700 active:scale-95 shadow-lg shadow-blue-200">Daftar Sekarang</button>
-          </div>
-        </form>
-      </div>
 
       <div class="form-container sign-in-container">
         <form action="#" class="bg-white flex flex-col items-center justify-center h-full px-10 text-center">
@@ -250,19 +209,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      const signUpButton = document.getElementById("signUp")
-      const signInButton = document.getElementById("signIn")
-      const container = document.getElementById("container")
-
-      signUpButton.addEventListener("click", () => {
-        container.classList.add("right-panel-active")
-      })
-
-      signInButton.addEventListener("click", () => {
-        container.classList.remove("right-panel-active")
-      })
-    </script>
   </body>
 </html>
