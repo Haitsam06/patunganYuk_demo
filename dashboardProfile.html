@@ -12,158 +12,189 @@
         theme: {
           extend: {
             colors: {
-              baseBlue: "#0052FF",
-              idrxGreen: "#12B76A",
+              milk: "#FDFDF1",
+              darkGreen: "#0A2E20",
+              accentGreen: "#12B76A",
+              deepGray: "#70798C",
+            },
+            borderRadius: {
+              "4xl": "2rem",
+              "5xl": "2.5rem",
             },
           },
         },
       }
     </script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&display=swap");
       body {
         font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #fdfdf1;
       }
       .glass-card {
-        background: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(10, 46, 32, 0.05);
       }
     </style>
   </head>
-  <body class="bg-[#F8FAFC]">
-    <nav class="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-md border-b border-gray-100">
+  <body class="bg-milk text-darkGreen">
+    <nav class="fixed top-0 z-50 w-full bg-milk/80 backdrop-blur-md border-b border-darkGreen/5">
       <div class="px-4 py-3 lg:px-6 flex items-center justify-between">
         <div class="flex items-center">
-          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" class="p-2 text-gray-500 rounded-lg sm:hidden"><i class="fas fa-bars text-xl"></i></button>
+          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" class="p-2 text-darkGreen rounded-lg sm:hidden hover:bg-darkGreen/5">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
           <a href="index.html" class="flex ms-2 items-center gap-2">
-            <div class="w-9 h-9 bg-baseBlue rounded-xl flex items-center justify-center text-white font-black">P</div>
-            <span class="text-xl font-extrabold tracking-tight">
+            <div class="w-8 h-8 bg-darkGreen rounded-lg flex items-center justify-center text-milk font-black shadow-md">P</div>
+            <span class="text-lg font-extrabold tracking-tight uppercase italic">
               Patungan
-              <span class="text-baseBlue">Web3</span>
+              <span class="text-accentGreen">Web3</span>
             </span>
           </a>
         </div>
         <div class="flex items-center gap-4">
-          <div class="hidden md:flex items-center bg-white px-4 py-2 rounded-2xl shadow-sm border border-gray-100 text-xs font-mono font-bold">0x71C...3E4F</div>
+          <div class="hidden md:flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-darkGreen/10 text-[10px] font-black font-mono text-darkGreen/60">0x71C...3E4F</div>
           <img class="w-10 h-10 rounded-2xl shadow-md border-2 border-white" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="user" />
         </div>
       </div>
     </nav>
 
-    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-24 bg-white border-r border-gray-100 transition-transform -translate-x-full sm:translate-x-0">
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-24 bg-white border-r border-darkGreen/5 transition-transform -translate-x-full sm:translate-x-0">
       <div class="h-full px-4 pb-4 overflow-y-auto flex flex-col">
         <div class="mb-8">
-          <a href="dashboardBuat.html" class="flex items-center justify-center gap-3 w-full py-4 bg-baseBlue text-white rounded-2xl font-bold shadow-xl shadow-blue-100 hover:-translate-y-1 transition-all">
+          <a href="dashboardBuat.html" class="flex items-center justify-center gap-3 w-full py-4 bg-darkGreen text-milk rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl shadow-darkGreen/10 hover:-translate-y-1 transition-all active:scale-95">
             <i class="fas fa-plus-circle"></i>
             Buat Patungan
           </a>
         </div>
-        <ul class="space-y-2 font-semibold flex-1">
+        <ul class="space-y-2 font-bold text-[11px] uppercase tracking-widest flex-1">
           <li>
-            <a href="dashboard.html" class="flex items-center p-3 text-gray-400 hover:text-baseBlue hover:bg-gray-50 rounded-2xl">
+            <a href="dashboard.html" class="flex items-center p-3 text-accentGreen bg-darkGreen/5 rounded-2xl">
               <i class="fas fa-house-chimney w-5 text-center"></i>
               <span class="ms-3">Home Dashboard</span>
             </a>
           </li>
           <li>
-            <a href="dashboardProfile.html" class="flex items-center p-3 text-baseBlue hover:bg-gray-50 rounded-2xl">
+            <a href="dashboardProfile.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
               <i class="fas fa-user-circle w-5 text-center"></i>
-              <span class="ms-3">Profile Dashboard</span>
+              <span class="ms-3">Profile</span>
             </a>
           </li>
           <li>
-            <a href="dashboardPatungan.html" class="flex items-center p-3 text-gray-400 hover:text-baseBlue hover:bg-gray-50 rounded-2xl">
+            <a href="dashboardPatungan.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
               <i class="fas fa-layer-group w-5 text-center"></i>
               <span class="ms-3">Patungan Saya</span>
             </a>
           </li>
           <li>
-            <a href="dashboardRiwayat.html" class="flex items-center p-3 text-gray-400 hover:text-baseBlue bg-blue-50/50 rounded-2xl">
+            <a href="dashboardRiwayat.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
               <i class="fas fa-receipt w-5 text-center"></i>
-              <span class="ms-3">Riwayat Donasi</span>
+              <span class="ms-3">Riwayat</span>
             </a>
           </li>
           <li>
-            <a href="dashboardLaporan.html" class="flex items-center p-3 text-gray-400 hover:text-baseBlue hover:bg-gray-50 rounded-2xl">
-              <i class="fas fa-file-contract w-5 text-center"></i>
-              <span class="ms-3 text-sm">Laporan Pengeluaran</span>
+            <a href="dashboardLaporan.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
+              <i class="fas fa-book w-5 text-center"></i>
+              <span class="ms-3">Laporan</span>
             </a>
           </li>
           <li>
-            <a href="dashboardValidator.html" class="flex items-center p-3 text-gray-400 hover:text-baseBlue hover:bg-gray-50 rounded-2xl">
-              <i class="fas fa-shield-check w-5 text-center"></i>
+            <a href="dashboardValidator.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
+              <i class="fas fa-shield-halved w-5 text-center"></i>
               <span class="ms-3">Validator</span>
-              <span class="ms-auto bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full">1</span>
+              <span class="ms-auto bg-accentGreen text-milk text-[9px] px-2 py-0.5 rounded-md">1</span>
             </a>
           </li>
         </ul>
+
+        <div class="pt-4 border-t border-darkGreen/5">
+          <a href="login.html" class="flex items-center p-3 text-red-400 hover:bg-red-50 rounded-2xl transition font-bold text-[11px] uppercase tracking-widest">
+            <i class="fas fa-right-from-bracket w-5 text-center"></i>
+            <span class="ms-3">Keluar</span>
+          </a>
+        </div>
       </div>
     </aside>
 
     <div class="p-6 sm:ml-64 pt-24 min-h-screen">
       <div class="max-w-5xl mx-auto">
         <div class="mb-10">
-          <h1 class="text-3xl font-black text-gray-900 tracking-tight">Profil Saya</h1>
-          <p class="text-gray-500 font-medium">Kelola identitas dan preferensi Web3 Anda.</p>
+          <h1 class="text-4xl font-black text-darkGreen tracking-tighter uppercase italic">Profil Saya</h1>
+          <p class="text-xs text-deepGray font-bold uppercase tracking-[0.2em] mt-2">Kelola identitas dan preferensi Web3 Anda.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div class="lg:col-span-1 space-y-6">
-            <div class="bg-white rounded-[40px] p-8 border border-gray-100 shadow-sm text-center relative overflow-hidden group">
-              <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+            <div class="bg-white rounded-[2.5rem] p-8 border border-darkGreen/5 shadow-sm text-center relative overflow-hidden group">
+              <div class="absolute top-0 left-0 w-full h-24 bg-darkGreen"></div>
               <div class="relative z-10 pt-4">
-                <img class="w-28 h-28 rounded-3xl border-4 border-white mx-auto shadow-xl" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="profile" />
-                <h3 class="text-xl font-bold text-gray-900 mt-4">Budi Santoso</h3>
-                <p class="text-xs font-bold text-baseBlue bg-blue-50 inline-block px-3 py-1 rounded-full mt-1 uppercase tracking-widest">budi@example.com</p>
+                <img class="w-28 h-28 rounded-3xl border-4 border-white mx-auto shadow-xl group-hover:scale-105 transition duration-500" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="profile" />
+                <h3 class="text-xl font-black text-darkGreen mt-4 uppercase italic tracking-tight">Budi Santoso</h3>
+                <p class="text-[9px] font-black text-accentGreen bg-accentGreen/10 inline-block px-3 py-1 rounded-md mt-2 uppercase tracking-[0.2em]">Verified Member</p>
               </div>
-              <div class="pt-6 border-t border-gray-50">
+              <div class="pt-6 mt-6 border-t border-darkGreen/5 flex justify-around">
                 <div>
-                  <p class="text-[10px] font-bold text-gray-400 uppercase">Kontribusi</p>
-                  <p class="text-sm font-black text-gray-900">12 Grup</p>
+                  <p class="text-[9px] font-black text-darkGreen/30 uppercase tracking-widest">Kontribusi</p>
+                  <p class="text-sm font-black text-darkGreen uppercase italic">12 Grup</p>
+                </div>
+                <div>
+                  <p class="text-[9px] font-black text-darkGreen/30 uppercase tracking-widest">Reputasi</p>
+                  <p class="text-sm font-black text-darkGreen uppercase italic">Top Tier</p>
                 </div>
               </div>
             </div>
 
-            <div class="bg-gray-900 rounded-[32px] p-6 text-white relative overflow-hidden">
-              <h4 class="text-xs font-bold opacity-50 uppercase tracking-widest mb-4">Dompet Terhubung</h4>
-              <div class="flex items-center gap-3 mb-6">
-                <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center"><i class="fa-brands fa-ethereum"></i></div>
-                <div class="flex-1">
-                  <p class="text-xs font-mono opacity-80">0x71C2...3E4F</p>
-                  <p class="text-[10px] font-bold text-blue-400 uppercase">Base Mainnet</p>
+            <div class="bg-darkGreen rounded-[2rem] p-6 text-milk relative overflow-hidden shadow-2xl">
+              <h4 class="text-[9px] font-black opacity-40 uppercase tracking-[0.2em] mb-4">Dompet Terhubung</h4>
+              <div class="flex items-center gap-3 mb-8">
+                <div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-accentGreen shadow-inner">
+                  <i class="fa-brands fa-ethereum"></i>
                 </div>
-                <button class="text-white/40 hover:text-white"><i class="fas fa-copy"></i></button>
+                <div class="flex-1">
+                  <p class="text-xs font-mono font-bold opacity-80">0x71C2...3E4F</p>
+                  <p class="text-[9px] font-black text-accentGreen uppercase tracking-widest">Base Network</p>
+                </div>
+                <button class="text-milk/30 hover:text-milk transition"><i class="fas fa-copy text-xs"></i></button>
               </div>
-              <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                <p class="text-[10px] opacity-50 uppercase font-bold">Total IDRX Tersedia</p>
-                <p class="text-xl font-black mt-1">Rp 1.250.000</p>
+              <div class="p-5 bg-white/5 rounded-2xl border border-white/10">
+                <p class="text-[9px] opacity-40 uppercase font-black tracking-widest">Saldo Tersedia</p>
+                <p class="text-2xl font-black mt-1 italic tracking-tighter">Rp 1.250.000</p>
               </div>
               <i class="fas fa-shield-halved absolute -bottom-6 -right-4 text-7xl opacity-5"></i>
             </div>
           </div>
 
           <div class="lg:col-span-2 space-y-8">
-            <div class="bg-white rounded-[40px] p-8 md:p-10 border border-gray-100 shadow-sm">
-              <h3 class="text-xl font-black text-gray-900 mb-8 flex items-center gap-3">
-                <span class="w-8 h-8 bg-blue-50 text-baseBlue rounded-lg flex items-center justify-center text-sm"><i class="fas fa-cog"></i></span>
+            <div class="bg-white rounded-[2.5rem] p-8 md:p-10 border border-darkGreen/5 shadow-sm">
+              <h3 class="text-xl font-black text-darkGreen mb-10 flex items-center gap-3 uppercase italic tracking-tighter">
+                <span class="w-10 h-10 bg-milk text-darkGreen rounded-xl flex items-center justify-center shadow-sm">
+                  <i class="fas fa-cog"></i>
+                </span>
                 Pengaturan Umum
               </h3>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-2">
-                  <label class="text-xs font-bold text-gray-400 uppercase tracking-wider">Nama Lengkap</label>
-                  <input type="text" value="Budi Santoso" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold text-gray-700 focus:ring-2 focus:ring-blue-100" />
+              <div class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="space-y-3">
+                    <label class="text-[10px] font-black text-darkGreen/40 uppercase tracking-[0.2em] ml-1">Nama Lengkap</label>
+                    <input type="text" value="BUDI SANTOSO" class="w-full bg-milk border-none rounded-2xl p-4 text-[11px] font-black text-darkGreen focus:ring-2 focus:ring-accentGreen/20 uppercase tracking-widest" />
+                  </div>
+                  <div class="space-y-3">
+                    <label class="text-[10px] font-black text-darkGreen/40 uppercase tracking-[0.2em] ml-1">Email Notifikasi</label>
+                    <input type="email" value="BUDI@EXAMPLE.COM" class="w-full bg-milk border-none rounded-2xl p-4 text-[11px] font-black text-darkGreen focus:ring-2 focus:ring-accentGreen/20 uppercase tracking-widest" />
+                  </div>
                 </div>
-                <div class="space-y-2">
-                  <label class="text-xs font-bold text-gray-400 uppercase tracking-wider">Email (Notifikasi)</label>
-                  <input type="email" value="budi@example.com" class="w-full bg-gray-50 border-none rounded-2xl p-4 text-sm font-bold text-gray-700 focus:ring-2 focus:ring-blue-100" />
+
+                <div class="space-y-3">
+                  <label class="text-[10px] font-black text-darkGreen/40 uppercase tracking-[0.2em] ml-1">Bio Singkat</label>
+                  <textarea rows="3" class="w-full bg-milk border-none rounded-2xl p-4 text-[11px] font-black text-darkGreen focus:ring-2 focus:ring-accentGreen/20 uppercase tracking-widest resize-none">PENGGIAT PATUNGAN SOSIAL BERBASIS TEKNOLOGI BLOCKCHAIN.</textarea>
                 </div>
               </div>
 
-              <div class="mt-10 flex gap-4">
-                <button class="flex-1 py-4 bg-baseBlue text-white rounded-2xl font-black text-sm shadow-xl shadow-blue-100 hover:bg-blue-700 transition active:scale-95">Simpan Perubahan</button>
-                <button class="px-8 py-4 bg-gray-100 text-gray-600 rounded-2xl font-black text-sm hover:bg-gray-200 transition">Batal</button>
+              <div class="mt-12 flex flex-col sm:flex-row gap-4">
+                <button class="flex-1 py-4 bg-darkGreen text-milk rounded-full font-black text-[10px] uppercase tracking-[0.2em] shadow-xl hover:bg-black transition active:scale-95">Simpan Perubahan</button>
+                <button class="px-10 py-4 bg-milk text-darkGreen border border-darkGreen/10 rounded-full font-black text-[10px] uppercase tracking-[0.2em] hover:bg-darkGreen/5 transition">Batal</button>
               </div>
             </div>
           </div>
