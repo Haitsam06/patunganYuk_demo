@@ -139,9 +139,9 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
           <div class="lg:col-span-5 bg-darkGreen rounded-[2.5rem] p-8 text-milk shadow-2xl relative overflow-hidden group border border-white/10">
             <div class="relative z-10">
-              <div class="flex items-center gap-2 opacity-60 mb-6">
+              <div class="flex items-center gap-2 opacity-60 mb-2">
                 <i class="fas fa-wallet text-xs"></i>
-                <span class="text-[10px] font-black uppercase tracking-[0.2em]">Total Saldo IDRX</span>
+                <span class="text-xs font-black uppercase tracking-[0.2em]">Total Saldo IDRX</span>
               </div>
               <h3 class="text-4xl md:text-5xl font-black mb-4 tracking-tighter italic">Rp 1.250.000</h3>
               <div class="flex gap-2">
@@ -153,18 +153,16 @@
 
           <div class="lg:col-span-7 bg-accentGreen/10 border border-accentGreen/20 p-8 rounded-[2.5rem] shadow-sm relative group overflow-hidden">
             <div class="flex items-start justify-between relative z-10">
-              <div class="flex gap-4">
+              <div class="flex gap-4 mt-4">
                 <div class="w-14 h-14 bg-accentGreen text-milk rounded-2xl flex items-center justify-center text-xl shadow-lg shadow-accentGreen/20">
                   <i class="fas fa-shield-halved"></i>
                 </div>
                 <div>
                   <p class="text-xs font-black text-accentGreen uppercase tracking-widest mb-1">Validator Task</p>
                   <p class="text-xl font-black text-darkGreen uppercase italic tracking-tight leading-none mb-3">
-                    1 Pencairan butuh
-                    <br />
-                    persetujuan Anda
+                    1 Pencairan butuh persetujuan Anda
                   </p>
-                  <a href="#" class="inline-flex items-center gap-2 bg-darkGreen text-milk text-[9px] font-black px-4 py-2 rounded-full uppercase tracking-widest hover:bg-black transition-all">
+                  <a href="dashboardValidator.html" class="inline-flex items-center gap-2 bg-darkGreen text-milk text-[9px] font-black px-4 py-2 rounded-full uppercase tracking-widest hover:bg-black transition-all">
                     Periksa Sekarang
                     <i class="fas fa-arrow-right"></i>
                   </a>
@@ -175,11 +173,15 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div class="lg:col-span-2 space-y-8">
             <div class="flex items-center justify-between">
               <h2 class="text-2xl font-black text-darkGreen uppercase italic tracking-tighter">Patungan Berjalan</h2>
-              <button class="text-[10px] font-black text-accentGreen uppercase tracking-[0.15em] hover:opacity-70 transition">Lihat Semua</button>
+              <a
+                href="dashboardPatungan.html"
+                class="text-[10px] font-black text-accentGreen uppercase tracking-[0.15em] hover:opacity-70 transition">
+                Lihat Semua
+              </a>
             </div>
 
             <div class="bg-white rounded-[2.5rem] p-8 border border-darkGreen/5 shadow-sm hover:shadow-xl transition-all duration-300 group">
@@ -204,14 +206,14 @@
                   <div>
                     <p class="text-[10px] font-black text-deepGray uppercase tracking-widest">Progres Dana</p>
                     <p class="text-xl font-black text-darkGreen">
-                      Rp 4.200.000
-                      <span class="text-sm font-bold text-deepGray/50">/ 5JT</span>
+                      4.200.000 IDRX
+                      <span class="text-sm font-bold text-deepGray/50">/ 5.000.000 IDRX</span>
                     </p>
                   </div>
-                  <span class="text-2xl font-black text-accentGreen italic">84%</span>
+                  <span class="text-2xl font-black text-accentGreen italic">80%</span>
                 </div>
                 <div class="w-full bg-milk h-4 rounded-full border border-darkGreen/5 overflow-hidden p-1">
-                  <div class="bg-accentGreen h-full rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(18,183,106,0.3)]" style="width: 84%"></div>
+                  <div class="bg-accentGreen h-full rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(18,183,106,0.3)]" style="width: 80%"></div>
                 </div>
               </div>
 
@@ -221,7 +223,11 @@
                   <img class="w-9 h-9 rounded-full border-2 border-white shadow-sm" src="https://api.dicebear.com/7.x/avataaars/svg?seed=2" />
                   <div class="w-9 h-9 bg-milk rounded-full border-2 border-white flex items-center justify-center text-[9px] font-black text-deepGray">+8</div>
                 </div>
-                <button class="bg-darkGreen hover:bg-black text-milk px-8 py-3 rounded-full font-black text-[10px] uppercase tracking-widest transition-all active:scale-95 shadow-lg">Setor Dana</button>
+                <a
+                  href="detail.html"
+                  class="bg-darkGreen hover:bg-black text-milk px-8 py-3 rounded-full font-black text-[10px] uppercase tracking-widest transition-all active:scale-95 shadow-lg">
+                  Setor Dana
+                </a>
               </div>
             </div>
           </div>
@@ -255,7 +261,12 @@
                 </div>
               </div>
 
-              <button class="w-full mt-10 py-4 rounded-2xl border-2 border-dashed border-darkGreen/10 text-[9px] font-black text-darkGreen/40 hover:border-accentGreen hover:text-accentGreen transition-all uppercase tracking-[0.2em]">Riwayat Transaksi</button>
+              <a
+                href="#"
+                class="w-full mt-10 py-4 rounded-2xl border-2 border-dashed border-darkGreen/10 text-[9px] font-black text-darkGreen/40 hover:border-accentGreen hover:text-accentGreen transition-all uppercase tracking-[0.2em] flex items-center justify-center">
+                Riwayat Transaksi
+              </a>
+
             </div>
           </div>
         </div>
