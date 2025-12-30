@@ -1,88 +1,399 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patungan Saya - PatunganWeb3</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              milk: "#FDFDF1",
+              darkGreen: "#0A2E20",
+              accentGreen: "#12B76A",
+              deepGray: "#70798C",
+            },
+            borderRadius: {
+              "4xl": "2rem",
+              "5xl": "2.5rem",
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #fdfdf1;
+      }
+
+      .tab-active {
+        background-color: #0a2e20;
+        color: #fdfdf1;
+        box-shadow: 0 10px 20px -5px rgba(10, 46, 32, 0.3);
+      }
+
+      @keyframes spin-slow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 3s linear infinite;
+      }
+    </style>
   </head>
-  <body class="bg-gray-50 text-gray-900 py-10">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <div class="lg:col-span-2 space-y-6">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-          <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Sedang Berjalan</span>
-          <h1 class="text-3xl font-bold mt-4 mb-2">Liburan Kantor Bali 2026</h1>
-          <div class="flex items-center gap-2 text-sm text-gray-500 mb-6">
-            <span>
-              Organizer:
-              <span class="text-blue-600 font-semibold">@boss_kantor</span>
+  <body class="bg-milk text-darkGreen">
+    <nav class="fixed top-0 z-50 w-full bg-milk/80 backdrop-blur-md border-b border-darkGreen/5">
+      <div class="px-4 py-3 lg:px-6 flex items-center justify-between">
+        <div class="flex items-center">
+          <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" class="p-2 text-darkGreen rounded-lg sm:hidden hover:bg-darkGreen/5">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+          <a href="index.html" class="flex ms-2 items-center gap-2">
+            <div class="w-8 h-8 bg-darkGreen rounded-lg flex items-center justify-center text-milk font-black shadow-md">P</div>
+            <span class="text-lg font-extrabold tracking-tight uppercase italic">
+              Patungan
+              <span class="text-accentGreen">Web3</span>
             </span>
-            <span>•</span>
-            <span>Berakhir: 30 Des 2025</span>
-          </div>
-
-          <p class="text-gray-600 leading-relaxed">
-            Halo teman-teman, ini link patungan resmi untuk sewa Villa 5 Kamar di Seminyak. Total biaya sewa 10 Juta untuk 3 hari. Mohon partisipasinya ya!
-            <br />
-            <br />
-            Dana akan otomatis dicairkan ke rekening BCA pemilik Villa jika target tercapai.
-          </p>
+          </a>
         </div>
-
-        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-          <h3 class="font-bold text-lg mb-4">Peserta (12 Orang)</h3>
-          <div class="space-y-4">
-            <div class="flex justify-between items-center border-b border-gray-50 pb-3">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full"></div>
-                <div>
-                  <p class="font-bold text-sm">sintia.base.eth</p>
-                  <p class="text-xs text-gray-400">2 jam yang lalu</p>
-                </div>
-              </div>
-              <span class="font-bold text-green-600">+ 100.000 IDRX</span>
-            </div>
-            <div class="flex justify-between items-center border-b border-gray-50 pb-3">
-              <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full"></div>
-                <div>
-                  <p class="font-bold text-sm">0x882...91a</p>
-                  <p class="text-xs text-gray-400">5 jam yang lalu</p>
-                </div>
-              </div>
-              <span class="font-bold text-green-600">+ 500.000 IDRX</span>
-            </div>
-          </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center bg-white px-4 py-2 rounded-full shadow-sm border border-darkGreen/10 text-[10px] font-black font-mono text-darkGreen/60">0x71C...3E4F</div>
+          <img class="w-10 h-10 rounded-2xl shadow-md border-2 border-white" src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="user" />
         </div>
       </div>
+    </nav>
 
-      <div class="lg:col-span-1">
-        <div class="bg-white p-6 rounded-2xl shadow-lg border border-blue-50 sticky top-6">
-          <div class="mb-6">
-            <p class="text-gray-500 text-sm font-medium">Dana Terkumpul</p>
-            <div class="flex items-baseline gap-1 mt-1">
-              <span class="text-3xl font-extrabold text-blue-600">7.500.000</span>
-              <span class="text-sm font-bold text-gray-400">/ 10.000.000 IDRX</span>
-            </div>
-
-            <div class="w-full bg-gray-100 rounded-full h-3 mt-3 overflow-hidden">
-              <div class="bg-blue-600 h-full rounded-full" style="width: 75%"></div>
-            </div>
-            <p class="text-xs text-right mt-2 text-gray-400">75% Tercapai</p>
-          </div>
-
-          <div class="space-y-4">
-            <div>
-              <label class="block text-xs font-bold text-gray-700 mb-1">Nominal Patungan (IDRX)</label>
-              <input type="number" class="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-lg font-bold focus:border-blue-500 focus:outline-none" placeholder="0" />
-            </div>
-
-            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition shadow-lg shadow-blue-200">Bayar Patungan</button>
-
-            <div class="flex items-center justify-center gap-2 text-xs text-gray-500 bg-gray-50 py-2 rounded-lg">
-              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-              Gas Fee ditanggung sistem (Gratis)
-            </div>
-          </div>
+    <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-24 bg-white border-r border-darkGreen/5 transition-transform -translate-x-full sm:translate-x-0">
+      <div class="h-full px-4 pb-4 overflow-y-auto flex flex-col">
+        <div class="mb-8">
+          <a href="dashboardBuat.html" class="flex items-center justify-center gap-3 w-full py-4 bg-darkGreen text-milk rounded-2xl font-black text-xs uppercase tracking-widest shadow-xl shadow-darkGreen/10 hover:-translate-y-1 transition-all active:scale-95">
+            <i class="fas fa-plus-circle"></i>
+            Buat Patungan
+          </a>
         </div>
+        <ul class="space-y-2 font-bold text-[11px] uppercase tracking-widest flex-1">
+          <li>
+            <a href="dashboard.html" class="flex items-center p-3 text-accentGreen bg-darkGreen/5 rounded-2xl">
+              <i class="fas fa-house-chimney w-5 text-center"></i>
+              <span class="ms-3">Home Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="dashboardProfile.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
+              <i class="fas fa-user-circle w-5 text-center"></i>
+              <span class="ms-3">Profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="dashboardPatungan.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
+              <i class="fas fa-layer-group w-5 text-center"></i>
+              <span class="ms-3">Patungan Saya</span>
+            </a>
+          </li>
+          <li>
+            <a href="dashboardRiwayat.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
+              <i class="fas fa-receipt w-5 text-center"></i>
+              <span class="ms-3">Riwayat</span>
+            </a>
+          </li>
+          <li>
+            <a href="dashboardLaporan.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
+              <i class="fas fa-book w-5 text-center"></i>
+              <span class="ms-3">Laporan</span>
+            </a>
+          </li>
+          <li>
+            <a href="dashboardValidator.html" class="flex items-center p-3 text-deepGray hover:text-darkGreen hover:bg-milk rounded-2xl transition">
+              <i class="fas fa-shield-halved w-5 text-center"></i>
+              <span class="ms-3">Validator</span>
+              <span class="ms-auto bg-accentGreen text-milk text-[9px] px-2 py-0.5 rounded-md">1</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="pt-4 border-t border-darkGreen/5">
+          <a href="login.html" class="flex items-center p-3 text-red-400 hover:bg-red-50 rounded-2xl transition font-bold text-[11px] uppercase tracking-widest">
+            <i class="fas fa-right-from-bracket w-5 text-center"></i>
+            <span class="ms-3">Keluar</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+<main class="p-6 sm:ml-64 pt-24 min-h-screen">
+    <div class="max-w-6xl mx-auto">
+      <a href="dashboardPatungan.html"
+         class="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-deepGray hover:text-darkGreen mb-6">
+        <i class="fas fa-arrow-left"></i> Kembali ke Patungan Saya
+      </a>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <section class="lg:col-span-2 space-y-8">
+          <div class="bg-white rounded-[2.5rem] p-10 border border-darkGreen/5 shadow-sm">
+            <div class="flex justify-between items-start mb-8">
+              <div class="flex gap-4">
+                <div class="w-16 h-16 bg-milk border border-darkGreen/5 rounded-2xl flex items-center justify-center text-2xl">
+                  <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <div>
+                  <span class="text-[9px] font-black text-accentGreen bg-accentGreen/10 px-3 py-1 rounded-md uppercase tracking-widest">
+                    Kategori: Liburan
+                  </span>
+                  <h1 class="text-3xl font-black uppercase italic tracking-tight mt-2">
+                    Sewa Villa Bali 3D2N
+                  </h1>
+                  <p class="text-sm text-deepGray font-bold mt-2">
+                    Organizer:
+                    <span class="text-accentGreen">@boss_kantor</span>
+                    · Berakhir: 30 Des 2025
+                  </p>
+                </div>
+              </div>
+  
+              <span class="px-4 py-2 rounded-full bg-accentGreen/10 text-accentGreen text-[10px] font-black uppercase tracking-widest">
+                Sedang Berjalan
+              </span>
+            </div>
+
+            <div class="text-sm text-darkGreen/70 leading-relaxed max-w-3xl mb-10">
+              Halo teman-teman, ini patungan resmi untuk sewa Villa 5 Kamar di Seminyak.
+              Total biaya sewa 10 Juta untuk 3 hari. Mohon partisipasinya ya!
+              <br><br>
+              Dana akan otomatis dicairkan ke rekening pemilik villa jika target tercapai.
+            </div>
+  
+            <div class="bg-milk p-6 rounded-2xl border border-darkGreen/5 mb-8">
+              <div class="flex justify-between items-end mb-3">
+                <div>
+                  <p class="text-[13px] font-black uppercase tracking-widest text-deepGray">
+                    Dana Terkumpul
+                  </p>
+                  <p class="text-xl font-black mt-2">
+                    4.040.000 IDRX
+                    <span class="text-sm text-darkGreen/30">/ 5.050.000 IDRX</span>
+                  </p>
+                </div>
+                <span class="text-2xl font-black text-accentGreen">80%</span>
+              </div>
+  
+              <div class="w-full bg-white h-4 rounded-full border border-darkGreen/5 p-1">
+                <div class="bg-accentGreen h-full rounded-full" style="width:80%"></div>
+              </div>
+              
+              <button
+                class="btnDana mt-4 font-black text-accentGreen text-sm flex items-center gap-2"
+                data-target="danaDetailKiri"
+                data-icon="chevronKiri">
+                Detail Dana
+                <i id="chevronKiri" class="fas fa-chevron-down text-[10px] transition-transform"></i>
+              </button>
+
+              <div id="danaDetailKiri" class="hidden border-t mt-4 pt-3 text-sm">
+
+                <div class="space-y-3">
+                  <div class="flex justify-between">
+                    <span>Target Dana</span>
+                    <span>5.000.000 IDRX</span>
+                  </div>
+            
+                  <div class="flex justify-between text-accentGreen-500">
+                    <span>Platform Fee</span>
+                    <span>+ 50.000 IDRX</span>
+                  </div>
+            
+                  <div class="border-t border-darkGreen/10 mt-4 pt-4 flex justify-between font-black">
+                    <span>Total Dana</span>
+                    <span class="text-accentGreen">5.050.000 IDRX</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="bg-milk p-6 rounded-2xl border border-darkGreen/5">
+              <h3 class="text-sm font-black uppercase tracking-widest mb-4">
+                Peserta (10 Orang)
+              </h3>
+  
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between">
+                  <span>0x098...9E7F</span>
+                  <span class="font-black text-red-500">Belum Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>0x782...91a</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>ywnzn.base.eth</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>0x882...91a</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>0x667...123a</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>sintia.base.eth</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>0x882...91a</span>
+                  <span class="font-black text-red-500">Belum Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>kea.eth</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>0x499...98a1</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>0x124...3a67</span>
+                  <span class="font-black text-accentGreen">Sudah Bayar</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <aside class="space-y-6">
+          <div class="bg-white p-8 rounded-[2.5rem] border border-darkGreen/5 shadow-sm">
+  
+            <h2 class="text-lg font-black uppercase tracking-widest mb-6">
+              Bayar Patungan
+            </h2>
+  
+            <div class="bg-milk p-6 rounded-2xl border border-darkGreen/5 mb-6">
+              <p class="text-[13px] font-black uppercase tracking-widest text-deepGray">
+                Nominal Patungan Anda
+              </p>
+              <p class="text-2xl font-black mt-2">
+                505.000 IDRX
+              </p>
+
+              <div class="border-t border-darkGreen/10 mt-4 flex justify-between font-black"></div>
+
+              <button
+                class="btnDana mt-4 font-black text-accentGreen text-sm flex items-center gap-2"
+                data-target="danaDetailKanan"
+                data-icon="chevronKanan">
+                Detail
+                <i id="chevronKanan" class="fas fa-chevron-down text-[10px] transition-transform"></i>
+              </button>
+
+              <div id="danaDetailKanan" class="hidden border-t mt-4 pt-3 text-sm">
+ 
+                <div class="space-y-3">
+                  <div class="flex justify-between">
+                    <span>Total Dana</span>
+                    <span>5.050.000 IDRX</span>
+                  </div>
+            
+                  <div class="flex justify-between text-accentGreen-500">
+                    <span>Jumlah Peserta</span>
+                    <span>10 Orang</span>
+                  </div>
+            
+                  <div class="border-t border-darkGreen/10 mt-4 pt-4 flex justify-between font-black items-center relative">
+                    <div class="flex items-center gap-2">
+                      <span>Total</span>
+
+                      <button
+                        type="button"
+                        id="btnInfoTotal"
+                        class="w-4 h-4 rounded-full border border-darkGreen/40
+                               text-[10px] font-black flex items-center justify-center
+                               text-darkGreen hover:bg-darkGreen hover:text-white transition">
+                        ?
+                      </button>
+                    </div>
+                  
+                    <span class="text-accentGreen">505.000 IDRX</span>
+                    
+                    <div
+                      id="popupTotal"
+                      class="hidden absolute right-0 top-full mt-3 w-64
+                             bg-white border border-darkGreen/10 rounded-xl p-4
+                             text-xs font-normal shadow-lg z-20">
+                      <p class="font-black mb-2">Perhitungan:</p>
+                  
+                      <div class="space-y-1 text-darkGreen/70">
+                        <div class="flex justify-between">
+                          <p>Total Dana ÷ Jumlah Peserta</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+  
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-sm font-bold text-deepGray">Status</span>
+              <span class="text-sm font-black text-red-500">
+                Belum Dibayar
+              </span>
+            </div>
+  
+            <button
+              class="w-full bg-darkGreen text-milk py-4 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-black active:scale-95">
+              Bayar
+            </button>
+  
+            <p class="text-center text-[9px] font-bold text-deepGray uppercase tracking-widest mt-6 opacity-50">
+              <i class="fas fa-gas-pump mr-1"></i>
+              Gas fee ditanggung oleh Paymaster (Gratis)
+            </p>
+          </div>
+  
+        </aside>
+  
       </div>
     </div>
-  </body>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+  <script>
+    document.querySelectorAll(".btnDana").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const detail = document.getElementById(btn.dataset.target);
+        const icon = document.getElementById(btn.dataset.icon);
+  
+        detail.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      });
+    });
+  </script>
+  <script>
+    const btnInfoTotal = document.getElementById("btnInfoTotal");
+    const popupTotal = document.getElementById("popupTotal");
+  
+    btnInfoTotal.addEventListener("click", () => {
+      popupTotal.classList.toggle("hidden");
+    });
+  
+    // Klik di luar → popup nutup
+    document.addEventListener("click", (e) => {
+      if (!btnInfoTotal.contains(e.target) && !popupTotal.contains(e.target)) {
+        popupTotal.classList.add("hidden");
+      }
+    });
+  </script>
+  
+  
+</body>
 </html>
